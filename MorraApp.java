@@ -72,8 +72,8 @@ do {
 
 while(!choice.equals("no"));//end game loop
 
-System.out.println("game history ");
-System.out.println("Round");
+System.out.println("****Game History *****");
+System.out.println("***Results from the Rounds****");
             for (int i = 0; i < round; i++) {
                 
                     System.out.println(i+1 + " = " + 

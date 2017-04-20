@@ -39,9 +39,9 @@ public void compute() {
 			Random r = new Random(); // Initialise the Random r variable.
 			 compFingers = r.nextInt(10) + 1; // Computer fingers is a random number between 1 and 10.
 
-
+                         System.out.println("--------------------------------------");
 		System.out.println("Computer shows " + compFingers + " fingers."); // Show computer's choice.
-
+                System.out.println("-----------------------------------------------");
 					 sum = compFingers + fingers; // Calculate the sum.
 					System.out.println();
 
@@ -49,12 +49,14 @@ public void compute() {
 						System.out.println("The sum is " + sum + " and is even.");
 
 						if(oddOrEven == 1){ // Player chose odds
-							System.out.println("Computer scored!");
+                                                        System.out.println();   
+							System.out.println("Computer scored!******");
 							computerScore+=2;
 							lostHuman++;
 						}
 						else{ // Player chose evens
-							System.out.println("You scored!");
+                                                    System.out.println();
+							System.out.println("You scored!*******");
 							playerScore+=2;
 							wonHuman++;
 						}
@@ -63,12 +65,14 @@ public void compute() {
 						System.out.println("The sum is " + sum + " and is odd.");
 
 						if(oddOrEven == 1){ // Player chose odds
-							System.out.println("You scored!");
+                                                    System.out.println();
+							System.out.println("You scored!*******");
 							playerScore+=2;
 							wonHuman++;
 						}
 						else{ // Player chose evens
-							System.out.println("Computer scored!");
+                                                    System.out.println();
+							System.out.println("Computer scored!*******");
 							computerScore+=2;
 							lostHuman++;
 						}
@@ -76,17 +80,19 @@ public void compute() {
 
 					if(fingers > compFingers){
 						playerScore++;
+                                                
 						System.out.println("You got a bonus point for being closer to the sum");
 					}else {
 						computerScore++;
+                                                System.out.println();
 						System.out.println("The computer got a bonus point for being closer to the sum");
 					}//**Here you need to add code which gives the bonus point.
 
 					System.out.println();
-					System.out.println();
-					System.out.println("Player score = " + playerScore);
-					System.out.println("Computer score = " + computerScore);
-					System.out.println("Round Score : = " + "Computer has won " +lostHuman+ " You have won " +wonHuman);
+					System.out.println("***************Round Score******************");
+					System.out.println("Player score = " + playerScore + " points");
+					System.out.println("Computer score = " + computerScore+ " points");
+					System.out.println("Round Score : = " + "Computer has won " +lostHuman+ " Rounds  : You have won " +wonHuman+ " Rounds");
 
 
 
