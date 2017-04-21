@@ -106,30 +106,37 @@ public void compute() {
 
 		}
 
-					//get method
-						public int getSum(){
-									return sum;
+					//get methods
+
+                                                        //returns sum to App class
+						public int getSum(){ 
+							return sum;
 							}
+                                                //returns compfingers to app class
 						public int getCompFingers(){
 							return compFingers;
 							}
-                                                
+                                                // returns player score
                                                 public int getPlayerScore() {
-                        return playerScore;
-    }
+                                                            return playerScore;
+                                                }
                                                
 
-    public int getComputerScore() {
-        return computerScore;
+                                          public int getComputerScore() {// 
+                                            return computerScore;
+                                                             }
+
+    public int getWonHuman() {
+        return wonHuman;
     }
 
-			//**and update the 'choice' variable with the answer. If they enter 'n', the while loop will break
-			//**and the game will end.
+    public int getLostHuman() {
+        return lostHuman;
+    }
+                                          
+                                          
 
-
-
-
-
+			
 
 }
 
