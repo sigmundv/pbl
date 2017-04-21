@@ -24,17 +24,27 @@ public class MorraApp {
                                 int fingerHistory[][] = new int [99][2];
                                 int fingersPlayed [] = new int [2];
                                 int round=0;
+                                int game=0;
 
 
 do {
-                             
+                                mymorra.setComputerScore(computerScore);
+                                mymorra.setPlayerScore(playerScore);
+                                System.out.println();
+                                System.out.println("Round "+ (round +1));
 				System.out.println();
+                                while (oddOrEven <1 || oddOrEven >2){
 				System.out.println("Would you like to be odds or evens? 1 = odds 2 = evens");
-				oddOrEven = reader.nextInt(); // Read users choice from console. If you don't select 1 or 2, the player will always be evens.
+				oddOrEven = reader.nextInt();
+                                }  // Read users choice from console. If you don't select 1 or 2, the player will always be evens.
 				mymorra.setOddOrEven(oddOrEven);
-
-				System.out.println("How many fingers would you like to show? Enter 1-10");
+                                
+                                while (fingers <1 || fingers>10){
+                                  System.out.println("How many fingers would you like to show? Enter 1-10");
 				fingers = reader.nextInt(); // Read in fingers player is choosing.
+                                }
+				
+                               
 				mymorra.setFingers(fingers);
 
 				mymorra.compute();
@@ -55,33 +65,42 @@ do {
 				choice = reader.next();
 				playerScore = 0;
 				computerScore = 0;
+                                game++;
+                                round=0;
+                                   
 				
 				
 			} else if (computerScore >= 6){
 				
-				System.out.println("The computer has won; its score is " + computerScore);
+				System.out.println("The computer has won the game; its score is " + computerScore);
 				System.out.print("Do you want to play again? Enter yes or no: ");//**Here you need to ask the player if they want to continue playing again
 				choice = reader.next();
 				playerScore = 0;
 				computerScore = 0;
+                                game++;
+                                round=0;
 				
 				
 			}
-
+    
 }
 
 while(!choice.equals("no"));//end game loop
-
+System.out.println();
 System.out.println("****Game History *****");
+System.out.println();
 System.out.println("***Results from the Rounds****");
+System.out.println();
+            System.out.printf("%5s | %7s | %17s\n","Round","Fingers","Computers Fingers");
             for (int i = 0; i < round; i++) {
                 
-                    System.out.println(i+1 + " = " + 
-                            fingerHistory[i][0]+ " | " + 
+                    System.out.printf("%-5d | %-7d | %-17d\n", (i+1), 
+                            fingerHistory[i][0],
                             fingerHistory[i][1]);
                 
             }
 System.out.println();
+System.out.println("No of games play" + game);
 		System.out.println("Game Over. Thank you for playing. Goodbye!");
 	}//end main method
 }//class end

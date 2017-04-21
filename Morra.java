@@ -29,8 +29,12 @@ public void Morra(){
 			this.fingers = fingers;
 		}
 
-
-
+                        public void setComputerScore(int computerScore){
+                        this.computerScore= computerScore;
+                                }
+                        public void setPlayerScore(int playerScore){
+                        this.playerScore= playerScore;
+                                }
 // compute method
 
 public void compute() {
@@ -90,8 +94,9 @@ public void compute() {
 
 					System.out.println();
 					System.out.println("***************Round Score******************");
-					System.out.println("Player score = " + playerScore + " points");
-					System.out.println("Computer score = " + computerScore+ " points");
+					System.out.println("Player has = " + playerScore + " points");
+					System.out.println("Computer has = " + computerScore+ " points");
+                                        System.out.println();
 					System.out.println("Round Score : = " + "Computer has won " +lostHuman+ " Rounds  : You have won " +wonHuman+ " Rounds");
 
 
@@ -112,6 +117,7 @@ public void compute() {
                                                 public int getPlayerScore() {
                         return playerScore;
     }
+                                               
 
     public int getComputerScore() {
         return computerScore;
