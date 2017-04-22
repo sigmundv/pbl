@@ -120,6 +120,14 @@ public class MorraApp {
 			
 			playerScore = myMorra.getPlayerScore(); 
 			computerScore = myMorra.getComputerScore();
+			playerBonus = myMorra.getPlayerBonus();
+			computerBonus = myMorra.getComputerBonus();
+			playerEvenFingers = myMorra.getPlayerEvenFingers();
+			computerEvenFingers = myMorra.getComputerEvenFingers();
+			playerOddFingers = myMorra.getPlayerOddFingers();
+			computerOddFingers = myMorra.getComputerOddFingers();
+			wonHuman = myMorra.getWonHuman();
+			lostHuman = myMorra.getLostHuman();
 			
 			// Store the number of rounds won/lost in an array
 			// to be used for printing game history
